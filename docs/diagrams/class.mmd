@@ -1,0 +1,14 @@
+classDiagram
+  class User { +username +email }
+  class Customer { +phone }
+  class Business { +name +address +working_hours }
+  class Service { +name +duration_minutes +price }
+  class Staff { +name +role }
+  class Appointment { +date +start_time +end_time +status +is_conflicting() }
+  User "1" --> "0..1" Customer
+  Business "1" --> "*" Service
+  Business "1" --> "*" Staff
+  Staff "*" --> "*" Service
+  User "1" --> "*" Appointment
+  Staff "1" --> "*" Appointment
+  Service "1" --> "*" Appointment

@@ -1,0 +1,18 @@
+sequenceDiagram
+  actor Customer
+  participant UI as Browser/UI
+  participant View as Django View
+  participant Logic as Booking Model
+  participant DB as Database
+  Customer->>UI: Submit service, staff, date and time
+  UI->>View: POST /book/
+  View->>Logic: Validate form and construct appointment
+  Logic->>DB: Query overlapping staff appointments
+  alt Slot is available
+    DB-->>Logic: No conflict
+    Logic->>DB: Save confirmed appointment
+    View-->>UI: Confirmation message
+  else Slot conflicts
+    DB-->>Logic: Existing overlap
+    View-->>UI: Slot-taken validation error
+  end

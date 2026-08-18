@@ -1,0 +1,11 @@
+flowchart LR
+  C[Customer] --> RL(Register / Login)
+  C --> BS(Browse Services)
+  C --> BA(Book Appointment)
+  C --> CA(Cancel Appointment)
+  C --> VMA(View My Appointments)
+  A[Business Admin] --> MS(Manage Services)
+  A --> MT(Manage Staff)
+  A --> VAA(View All Appointments)
+  A --> BT(Block Time Slot)
+  BA -. includes .-> AV(Check Availability)
