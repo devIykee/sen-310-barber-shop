@@ -12,8 +12,8 @@ The application was designed around one important business rule: **a barber cann
 The Render deployment is a Web Service. Its address is shown in the Render dashboard under the service name. Record the final address here before submission:
 
 ```text
-Live URL: https://<your-render-service-name>.onrender.com
-Administration: https://<your-render-service-name>.onrender.com/admin/
+Live URL: [sen-310-barber-shop](https://sen-310-barber-shop.onrender.com/)
+Administration: [admin](https://sen-310-barber-shop.onrender.com/admin)
 ```
 
 Render’s free tier can take a short time to wake after inactivity. If the first request is slow, wait for it to finish loading rather than refreshing repeatedly.
